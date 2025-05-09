@@ -53,9 +53,9 @@ module.exports = {
 
       /* ----------  TYPOGRAPHY ---------- */
       fontFamily: {
-        headline:   ["Lexend Mega", "Majesto", "sans-serif"],
-        subheadline:["Montserrat",   "Poppins", "sans-serif"],
-        content:    ["Poppins",      "Montserrat", "sans-serif"],
+        headline:   ["Inter", "system-ui", "sans-serif"],
+        subheadline:["Montserrat", "Inter", "sans-serif"],
+        content:    ["Poppins", "Montserrat", "sans-serif"],
         tagline:    ["Merriweather", "serif"],   // 900-weight punch lines
       },
     },
