@@ -1,4 +1,3 @@
-// src/components/CryptoChart.jsx
 import React, {
   useEffect, useState, useCallback, useMemo,
 } from 'react';
@@ -92,7 +91,7 @@ const CustomTooltip = ({ active, payload, label }) => {
         </p>
       )}
       {map.buyHoldValue && map.strategyValue && (
-        <p className="text-blue-600 mt-2 font-medium">
+        <p className="text-green-600 mt-2 font-medium">
           Difference: {fUSD(map.strategyValue.value - map.buyHoldValue.value)}
           {' '}
           ({((map.strategyValue.value / map.buyHoldValue.value - 1) * 100).toFixed(1)}%)
@@ -241,7 +240,7 @@ export default function CryptoChart() {
       {/* stats summary */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-3 sm:mb-5">
         <div className="bg-white/80 backdrop-blur rounded-lg p-3 shadow-md border border-red-100">
-          <p className="text-gray-500 text-sm">Buy & Hold {assetNames[asset]}</p>
+          <p className="text-gray-500 text-sm">Buy & Hold</p>
           <p className="text-red-600 text-xl sm:text-2xl font-semibold">{fUSD(currentValues.buyHold)}</p>
         </div>
         
@@ -271,8 +270,8 @@ export default function CryptoChart() {
             top: 20, 
             right: 30, 
             bottom: 35, 
-            left: 10, 
-            ...window.innerWidth > 640 && { right: 60, left: 60 } 
+            left: 20, 
+            ...window.innerWidth > 640 && { right: 60, left: 80 } 
           }}>
             {/* ─── defs (gradient + glow) ───────────────────── */}
             <defs>
@@ -321,8 +320,14 @@ export default function CryptoChart() {
               domain={[usdMin, usdMax]}
               tickFormatter={fUSD}
               tick={{ fontSize: window.innerWidth < 640 ? 10 : 12 }}
-              width={window.innerWidth < 640 ? 50 : 60}
-              label={window.innerWidth >= 640 ? { value: 'USD', angle: -90, position: 'insideLeft' } : null}
+              width={window.innerWidth < 640 ? 50 : 70}
+              label={{ 
+                value: 'USD', 
+                angle: -90, 
+                position: 'insideLeft', 
+                offset: -10,
+                style: { textAnchor: 'middle' }
+              }}
             />
 
             <Tooltip content={<CustomTooltip />} />
