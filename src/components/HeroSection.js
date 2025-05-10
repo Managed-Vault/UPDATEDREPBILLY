@@ -69,10 +69,11 @@ const HeroSection = () => {
                   <div className="absolute -inset-1 bg-gradient-to-r from-[#4db2d3] via-[#4db2d3] to-[#4db2d3] rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
                   <Link
                     to="/apply"
-                    className="relative inline-block w-full md:w-auto bg-[#4db2d3] text-white font-bold py-5 px-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-lg md:text-xl"
+                    className="relative inline-block w-auto bg-[#4db2d3] text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-base md:text-lg whitespace-nowrap"
                   >
-                    <span className="flex items-center justify-center">
-                      START YOUR WEALTH PLAN TODAY - APPLY HERE
+                    <span className="flex flex-col items-center justify-center leading-tight">
+                      <span>Start Your Wealth Plan Today</span>
+                      <span>Apply Here</span>
                     </span>
                   </Link>
                 </div>
@@ -132,13 +133,13 @@ const HeroSection = () => {
             <div className="flex justify-center mb-5">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-white via-white to-white rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
-
                 <Link
                   to="/apply"
-                  className="relative inline-block bg-white text-[#4db2d3] font-bold py-5 px-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-lg md:text-xl"
+                  className="relative inline-block bg-white text-[#4db2d3] font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-base md:text-lg whitespace-nowrap"
                 >
-                  <span className="flex items-center justify-center">
-                    Start Your Wealth Plan Today - Apply Here
+                  <span className="flex flex-col items-center justify-center leading-tight">
+                    <span>Start Your Wealth Plan Today</span>
+                    <span>Apply Here</span>
                   </span>
                 </Link>
               </div>
