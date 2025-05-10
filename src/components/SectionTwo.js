@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import { ReactComponent as BalloonSvg } from './assets/balloon.svg';   // ← optional: your own bubble
-
 const SectionTwo = () => (
   <>
     {/* SECTION 2 - THE PROBLEM */}
@@ -40,7 +38,7 @@ const SectionTwo = () => (
             to="/apply"
             className="inline-block bg-brand-600 text-white font-subheadline font-bold py-4 px-10 rounded-full shadow-md hover:bg-brand-700 hover:shadow-lg transition-all duration-300 text-lg mb-12"
           >
-            Start Your Wealth Plan Today&nbsp;- Apply Here
+            Start Your Wealth Plan Today&nbsp;- Apply&nbsp;Here
           </Link>
         </div>
 
@@ -105,11 +103,11 @@ const SectionTwo = () => (
         <div className="flex flex-col gap-8">
           {/* WSJ IMAGE */}
           <div className="flex flex-col max-w-4xl mx-auto">
-            <div className="rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl mb-2">
+            <div className="rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl mb-2 h-[500px] flex items-center justify-center bg-white">
               <img
                 src={`${process.env.PUBLIC_URL}/images/wallstreet.jpg`}
                 alt="Americans Are Falling Behind on Their Bills"
-                className="w-full h-auto max-h-96 object-contain bg-white"
+                className="w-full h-auto max-h-[500px] object-contain"
               />
             </div>
             <a
@@ -124,11 +122,11 @@ const SectionTwo = () => (
 
           {/* US News IMAGE */}
           <div className="flex flex-col max-w-4xl mx-auto">
-            <div className="rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl mb-2">
+            <div className="rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl mb-2 h-[500px] flex items-center justify-center bg-white">
               <img
                 src={`${process.env.PUBLIC_URL}/images/emergency.jpg`}
                 alt="Survey: 42% of Americans Don't Have an Emergency Fund"
-                className="w-full h-auto max-h-96 object-contain bg-white"
+                className="w-full h-auto max-h-[500px] object-contain"
               />
             </div>
             <a
@@ -149,8 +147,8 @@ const SectionTwo = () => (
           </h2>
           <p className="text-xl md:text-2xl font-content text-neutral-700 max-w-4xl mx-auto leading-relaxed">
             After fees and inflation, the average return is barely <span className="font-bold">4%</span>.{' '}
-            Our Strategy: <span className="text-brand-600 font-bold">10× That</span>. The difference isn’t luck.
-            It’s education.
+            Our Strategy: <span className="text-brand-600 font-bold">10× That</span>. The difference isn't luck.
+            It's education.
           </p>
         </div>
       </div>
