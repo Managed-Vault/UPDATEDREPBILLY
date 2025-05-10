@@ -25,8 +25,8 @@ const HeroSection = () => {
                 <div className="flex -space-x-3 mr-4">
                   <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/20 overflow-hidden">
                     <img 
-                      src={process.env.PUBLIC_URL + "/images/Matt.jpg"}
-                      alt="Member Matt"
+                      src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg"
+                      alt="Member Profile"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -150,8 +150,8 @@ const HeroSection = () => {
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/20 overflow-hidden">
                   <img 
-                    src={process.env.PUBLIC_URL + "/images/Matt.jpg"}
-                    alt="Member Matt"
+                    src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg"
+                    alt="Member Profile"
                     className="w-full h-full object-cover"
                   />
                 </div>
