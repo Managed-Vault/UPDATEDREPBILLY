@@ -88,7 +88,7 @@ const CustomTooltip = ({ active, payload, label }) => {
       )}
       {map.strategyValue && (
         <p className="text-blue-600 font-medium">
-          Our Strategy: {fUSD(map.strategyValue.value)}
+          ARC Strategies: {fUSD(map.strategyValue.value)}
         </p>
       )}
       {map.buyHoldValue && map.strategyValue && (
@@ -246,7 +246,7 @@ export default function CryptoChart() {
         </div>
         
         <div className="bg-white/80 backdrop-blur rounded-lg p-3 shadow-md border border-blue-100">
-          <p className="text-gray-500 text-sm">Our Strategy</p>
+          <p className="text-gray-500 text-sm">ARC Strategies</p>
           <p className="text-blue-600 text-xl sm:text-2xl font-semibold">{fUSD(currentValues.strategy)}</p>
         </div>
         
@@ -338,7 +338,7 @@ export default function CryptoChart() {
             <Area
               type="monotone"
               dataKey="buyHoldValue"
-              name="Buy & Hold Bitcoin VS Strategy Value"
+              name="Buy & Hold"
               stroke="#ef4444"
               fill="url(#gradBuyHold)"
               strokeWidth={window.innerWidth < 640 ? 1.5 : 2.5}
@@ -347,6 +347,7 @@ export default function CryptoChart() {
             <Line
               type="monotone"
               dataKey="buyHoldValue"
+              name="Buy & Hold"
               stroke="#ef4444"
               strokeWidth={window.innerWidth < 640 ? 2 : 3}
               dot={false}
@@ -357,7 +358,7 @@ export default function CryptoChart() {
             <Area
               type="monotone"
               dataKey="strategyValue"
-              name="Our Strategy"
+              name="ARC Strategies"
               stroke="#3b82f6"
               fill="url(#gradStrategy)"
               strokeWidth={window.innerWidth < 640 ? 1.5 : 2.5}
@@ -366,14 +367,13 @@ export default function CryptoChart() {
             <Line
               type="monotone"
               dataKey="strategyValue"
+              name="ARC Strategies"
               stroke="#3b82f6"
               strokeWidth={window.innerWidth < 640 ? 2 : 3}
               dot={false}
               activeDot={{ r: 6, strokeWidth: 2 }}
               filter="url(#blueGlow)"
             />
-
-            
           </LineChart>
         </ResponsiveContainer>
       </div>
