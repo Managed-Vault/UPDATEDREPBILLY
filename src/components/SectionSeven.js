@@ -30,7 +30,7 @@ const SectionSeven = () => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-xl leading-relaxed font-content text-neutral-700">
-            Flexible payment plans and financing available
+            Flexible Payment Plans Available
           </p>
         </div>
         
@@ -46,7 +46,7 @@ const SectionSeven = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-tagline font-bold text-brand-600">$3,597<span className="text-neutral-500 text-lg font-normal">/year</span></div>
-                  <p className="text-sm font-content text-neutral-500 mt-1">One-time payment options available</p>
+                  <p className="text-sm font-content text-neutral-500 mt-1">Flexible Payment Plans Available</p>
                 </div>
               </div>
               
