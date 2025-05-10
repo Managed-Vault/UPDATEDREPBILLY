@@ -23,9 +23,27 @@ const HeroSection = () => {
               {/* Members info */}
               <div className="flex items-center mb-6">
                 <div className="flex -space-x-3 mr-4">
-                  <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/20 flex items-center justify-center text-xs font-bold text-[#4db2d3]">JR</div>
-                  <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/20 flex items-center justify-center text-xs font-bold text-[#4db2d3]">KT</div>
-                  <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/20 flex items-center justify-center text-xs font-bold text-[#4db2d3]">MS</div>
+                  <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/20 overflow-hidden">
+                    <img 
+                      src={process.env.PUBLIC_URL + "/images/Matt.jpg"}
+                      alt="Member Matt"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/20 overflow-hidden">
+                    <img 
+                      src={process.env.PUBLIC_URL + "/images/Larry.jpg"}
+                      alt="Member Larry"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/20 overflow-hidden">
+                    <img 
+                      src={process.env.PUBLIC_URL + "/images/Thomas.jpg"}
+                      alt="Member Thomas"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="w-10 h-10 rounded-full ring-2 ring-[#4db2d3] bg-[#4db2d3]/80 flex items-center justify-center text-xs font-bold text-white">+42</div>
                 </div>
                 <div className="text-sm md:text-base text-[#4db2d3] font-medium">2867 MEMBERS</div>
@@ -130,9 +148,27 @@ const HeroSection = () => {
 
             <div className="flex items-center justify-center space-x-6">
               <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/20 flex items-center justify-center text-xs font-bold text-white">JR</div>
-                <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/20 flex items-center justify-center text-xs font-bold text-white">KT</div>
-                <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/20 flex items-center justify-center text-xs font-bold text-white">MS</div>
+                <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/20 overflow-hidden">
+                  <img 
+                    src={process.env.PUBLIC_URL + "/images/Matt.jpg"}
+                    alt="Member Matt"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/20 overflow-hidden">
+                  <img 
+                    src={process.env.PUBLIC_URL + "/images/Larry.jpg"}
+                    alt="Member Larry"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/20 overflow-hidden">
+                  <img 
+                    src={process.env.PUBLIC_URL + "/images/Thomas.jpg"}
+                    alt="Member Thomas"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="w-10 h-10 rounded-full ring-2 ring-white bg-white/30 flex items-center justify-center text-xs font-bold text-white">+42</div>
               </div>
               <div className="text-sm md:text-base text-white font-medium">Joined this week</div>
