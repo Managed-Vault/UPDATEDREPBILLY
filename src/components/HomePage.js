@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroSection from "./HeroSection";
 import SectionTwo from "./SectionTwo";
@@ -9,10 +8,10 @@ import SectionSix from "./SectionSix";
 import SectionSeven from "./SectionSeven";
 import SectionEight from "./SectionEight";
 import Footer from "./Footer";
+import RecentActivity from "./RecentActivity";
 
 function HomePage() {
   return (
-    // Use font-content as the default on the entire page
     <div className="font-content text-neutral-800">
       <HeroSection />
       <SectionTwo />
@@ -23,6 +22,7 @@ function HomePage() {
       <SectionSeven />
       <SectionEight />
       <Footer />
+      <RecentActivity />
     </div>
   );
 }

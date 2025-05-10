@@ -1,0 +1,12 @@
+{
+  "activities": [
+    { "name": "Michael S.", "location": "Los Angeles, CA", "product": "Galaxy", "timeAgo": "30 sec ago" },
+    { "name": "Emma R.", "location": "Chicago, IL", "product": "Galaxy", "timeAgo": "1 min ago" },
+    { "name": "Daniel K.", "location": "Miami, FL", "product": "Galaxy", "timeAgo": "45 sec ago" },
+    { "name": "Sophia L.", "location": "Seattle, WA", "product": "Galaxy", "timeAgo": "1 min 15 sec ago" },
+    { "name": "Christopher M.", "location": "Austin, TX", "product": "Apex", "timeAgo": "20 sec ago" },
+    { "name": "Olivia T.", "location": "Denver, CO", "product": "Apex", "timeAgo": "50 sec ago" },
+    { "name": "Matthew B.", "location": "Boston, MA", "product": "Apex", "timeAgo": "1 min 10 sec ago" },
+    { "name": "Isabella C.", "location": "Portland, OR", "product": "Apex", "timeAgo": "35 sec ago" }
+  ]
+}

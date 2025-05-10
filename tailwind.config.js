@@ -58,6 +58,9 @@ module.exports = {
         content:    ["Poppins", "Montserrat", "sans-serif"],
         tagline:    ["Merriweather", "serif"],   // 900-weight punch lines
       },
+      animation: {
+        'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+      },
     },
   },
   plugins: [],
