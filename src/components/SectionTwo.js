@@ -101,21 +101,14 @@ const SectionTwo = () => (
     <section className="bg-gradient-to-b from-white to-neutral-50 py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col gap-8">
-          {/* WSJ IMAGE */}
+          {/* News Article 1 */}
           <div className="flex flex-col max-w-4xl mx-auto w-full">
             <div className="rounded-xl shadow-lg overflow-hidden bg-white">
-              <div className="w-full px-4 py-3 border-b border-neutral-100">
-                <img 
-                  src={`${process.env.PUBLIC_URL}/images/wsj-logo.png`}
-                  alt="Wall Street Journal"
-                  className="h-6 w-auto"
-                />
-              </div>
-              <div className="aspect-[4/3] w-full relative">
+              <div className="aspect-[16/9] w-full relative">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/wallstreet.jpg`}
                   alt="Americans Are Falling Behind on Their Bills"
-                  className="absolute inset-0 w-full h-full object-contain"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -129,21 +122,14 @@ const SectionTwo = () => (
             </a>
           </div>
 
-          {/* US News IMAGE */}
+          {/* News Article 2 */}
           <div className="flex flex-col max-w-4xl mx-auto w-full">
             <div className="rounded-xl shadow-lg overflow-hidden bg-white">
-              <div className="w-full px-4 py-3 border-b border-neutral-100">
-                <img 
-                  src={`${process.env.PUBLIC_URL}/images/usnews-logo.png`}
-                  alt="US News"
-                  className="h-6 w-auto"
-                />
-              </div>
-              <div className="aspect-[4/3] w-full relative">
+              <div className="aspect-[16/9] w-full relative">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/emergency.jpg`}
                   alt="Survey: 42% of Americans Don't Have an Emergency Fund"
-                  className="absolute inset-0 w-full h-full object-contain"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </div>
