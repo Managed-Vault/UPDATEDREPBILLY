@@ -95,7 +95,7 @@ const SectionSeven = () => {
                   </div>
                   <div>
                     <h4 className="font-subheadline font-semibold text-neutral-800">Personalized Strategy Calls</h4>
-                    <p className="font-content text-neutral-600 text-sm">1-on-1 guidance from experts</p>
+                    <p className="font-content text-neutral-600 text-sm">1-on-1 guidance from expert coaches</p>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@ const SectionSeven = () => {
                   <div>
                     <h4 className="font-subheadline font-semibold text-neutral-800 mb-1">Payment Flexibility</h4>
                     <p className="font-content text-neutral-600">
-                      We offer various payment options to fit your budget, including payment plans and financing options. Our goal is to make this investment accessible for serious investors.
+                      We offer various payment plans and financing to fit your budget. Our goal is to make this investment accessible to any student.
                     </p>
                   </div>
                 </div>
