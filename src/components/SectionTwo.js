@@ -104,11 +104,11 @@ const SectionTwo = () => (
           {/* News Article 1 */}
           <div className="flex flex-col max-w-4xl mx-auto w-full">
             <div className="rounded-xl shadow-lg overflow-hidden bg-white">
-              <div className="aspect-[16/9] w-full relative">
+              <div className="aspect-[4/3] w-full relative">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/wallstreet.jpg`}
                   alt="Americans Are Falling Behind on Their Bills"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain"
                 />
               </div>
             </div>
@@ -125,11 +125,11 @@ const SectionTwo = () => (
           {/* News Article 2 */}
           <div className="flex flex-col max-w-4xl mx-auto w-full">
             <div className="rounded-xl shadow-lg overflow-hidden bg-white">
-              <div className="aspect-[16/9] w-full relative">
+              <div className="aspect-[4/3] w-full relative">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/emergency.jpg`}
                   alt="Survey: 42% of Americans Don't Have an Emergency Fund"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain"
                 />
               </div>
             </div>
