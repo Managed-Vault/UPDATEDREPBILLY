@@ -102,38 +102,56 @@ const SectionTwo = () => (
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col gap-8">
           {/* WSJ IMAGE */}
-          <div className="flex flex-col max-w-4xl mx-auto">
-            <div className="rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl mb-2 h-[500px] flex items-center justify-center bg-white">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/wallstreet.jpg`}
-                alt="Americans Are Falling Behind on Their Bills"
-                className="w-full h-auto max-h-[500px] object-contain"
-              />
+          <div className="flex flex-col max-w-4xl mx-auto w-full">
+            <div className="rounded-xl shadow-lg overflow-hidden bg-white">
+              <div className="w-full px-4 py-3 border-b border-neutral-100">
+                <img 
+                  src={`${process.env.PUBLIC_URL}/images/wsj-logo.png`}
+                  alt="Wall Street Journal"
+                  className="h-6 w-auto"
+                />
+              </div>
+              <div className="aspect-[4/3] w-full relative">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/wallstreet.jpg`}
+                  alt="Americans Are Falling Behind on Their Bills"
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              </div>
             </div>
             <a
               href="https://www.wsj.com/finance/americans-credit-debt-spending-interest-rates-f3836f23"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-content text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              className="text-xs font-content text-gray-600 hover:text-blue-600 transition-colors duration-200 mt-2"
             >
               Source: Wall Street Journal
             </a>
           </div>
 
           {/* US News IMAGE */}
-          <div className="flex flex-col max-w-4xl mx-auto">
-            <div className="rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl mb-2 h-[500px] flex items-center justify-center bg-white">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/emergency.jpg`}
-                alt="Survey: 42% of Americans Don't Have an Emergency Fund"
-                className="w-full h-auto max-h-[500px] object-contain"
-              />
+          <div className="flex flex-col max-w-4xl mx-auto w-full">
+            <div className="rounded-xl shadow-lg overflow-hidden bg-white">
+              <div className="w-full px-4 py-3 border-b border-neutral-100">
+                <img 
+                  src={`${process.env.PUBLIC_URL}/images/usnews-logo.png`}
+                  alt="US News"
+                  className="h-6 w-auto"
+                />
+              </div>
+              <div className="aspect-[4/3] w-full relative">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/emergency.jpg`}
+                  alt="Survey: 42% of Americans Don't Have an Emergency Fund"
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              </div>
             </div>
             <a
               href="https://www.usnews.com/banking/articles/2025-financial-wellness-survey"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-content text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              className="text-xs font-content text-gray-600 hover:text-blue-600 transition-colors duration-200 mt-2"
             >
               Source: US News
             </a>
