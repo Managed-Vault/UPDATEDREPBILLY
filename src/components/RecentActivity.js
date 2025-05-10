@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import activityData from '../data/recentActivity.json';
 
-const Toast = ({ activity }) => (
-  <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm w-full transform transition-all duration-500 opacity-0 translate-y-2 animate-fade-in-up">
+const Toast = ({ activity, isExiting }) => (
+  <div className={`fixed bottom-4 right-4 z-[9999] bg-white rounded-lg shadow-xl p-4 max-w-sm w-full transform ${
+    isExiting ? 'animate-fade-out-down' : 'animate-fade-in-up'
+  }`}>
     <div className="flex items-center">
       <div className="flex-shrink-0">
         <div className="h-10 w-10 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold">
@@ -29,12 +31,18 @@ function shuffleArray(array) {
   return newArray;
 }
 
+// Random delay between 40-60 seconds
+const getRandomDelay = () => Math.floor(Math.random() * (60000 - 40000) + 40000);
+
 export default function RecentActivity() {
   const [activities, setActivities] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [batchIndex, setBatchIndex] = useState(0);
   const [currentToast, setCurrentToast] = useState(null);
+  const [isExiting, setIsExiting] = useState(false);
+  const [isWaitingForDelay, setIsWaitingForDelay] = useState(false);
   const lastShownName = useRef('');
+  const timeoutRef = useRef(null);
 
   const initializeActivities = useCallback(() => {
     setActivities(shuffleArray(activityData.activities));
@@ -44,9 +52,16 @@ export default function RecentActivity() {
 
   useEffect(() => {
     initializeActivities();
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
   }, [initializeActivities]);
 
   const showNextToast = useCallback(() => {
+    if (isWaitingForDelay) return;
+
     if (currentIndex >= activities.length) {
       initializeActivities();
       return;
@@ -65,13 +80,26 @@ export default function RecentActivity() {
     const activity = activities[nextIndex];
     lastShownName.current = activity.name;
     setCurrentToast(activity);
+    setIsExiting(false);
     setCurrentIndex(nextIndex + 1);
     setBatchIndex((prev) => (prev + 1) % 4);
+    setIsWaitingForDelay(true);
 
-    setTimeout(() => {
-      setCurrentToast(null);
-    }, 5000);
-  }, [activities, currentIndex, initializeActivities]);
+    // Start fade out after 4.7 seconds
+    timeoutRef.current = setTimeout(() => {
+      setIsExiting(true);
+      
+      // Remove toast after animation completes
+      timeoutRef.current = setTimeout(() => {
+        setCurrentToast(null);
+        
+        // Set up the random delay for the next toast
+        timeoutRef.current = setTimeout(() => {
+          setIsWaitingForDelay(false);
+        }, getRandomDelay());
+      }, 300);
+    }, 4700);
+  }, [activities, currentIndex, initializeActivities, isWaitingForDelay]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +107,7 @@ export default function RecentActivity() {
       const milestones = [25, 50, 75, 100];
       
       if (milestones.some(milestone => scrollPercent >= milestone)) {
-        if (!currentToast && batchIndex < 4) {
+        if (!currentToast && batchIndex < 4 && !isWaitingForDelay) {
           showNextToast();
         }
       }
@@ -87,7 +115,7 @@ export default function RecentActivity() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [currentToast, batchIndex, showNextToast]);
+  }, [currentToast, batchIndex, showNextToast, isWaitingForDelay]);
 
-  return currentToast ? <Toast activity={currentToast} /> : null;
+  return currentToast ? <Toast activity={currentToast} isExiting={isExiting} /> : null;
 }

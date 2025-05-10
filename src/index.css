@@ -19,6 +19,21 @@
   }
 }
 
+@keyframes fade-out-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.animate-fade-out-down {
+  animation: fade-out-down 0.3s ease-in forwards;
 }
