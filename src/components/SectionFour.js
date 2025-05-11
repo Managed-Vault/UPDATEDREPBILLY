@@ -116,7 +116,9 @@ const SectionFour = () => {
 
         {/* CTA callout */}
         <div className="cta-callout text-center mb-10 max-w-3xl mx-auto p-6 bg-brand-50 rounded-xl border border-brand-100">
-          <h3 className="text-xl md:text-2xl font-headline font-semibold mb-4 text-brand-700">See The Difference Yourself</h3>
+          <h3 className="text-2xl md:text-4xl font-headline font-bold mb-6 text-brand-700 drop-shadow-sm">
+            See The Difference Yourself
+          </h3>
           <p className="text-lg leading-relaxed font-content text-neutral-700">
             1. Choose your crypto from the dropdown below
             <br />
