@@ -5,7 +5,7 @@ import CryptoChart from './CryptoChart';
 const SectionFour = () => { 
   return (
     /* SECTION 4: STRATEGY SECTION - SIGNALS FIRST */
-    <section className="bg-gradient-to-b from-neutral-50 to-white py-24 px-4 text-neutral-800 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-neutral-50 to-white py-24 px-4 text-neutral-800 relative overflow-hidden" id="clear-easy-signals">
       {/* faint grid pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -33,8 +33,33 @@ const SectionFour = () => {
           </p>
         </div>
 
+        {/* Performance stats bar */}
+        <div className="leo-stats-bar flex flex-wrap justify-around mb-10 max-w-5xl mx-auto">
+          <div className="leo-stat text-center p-4">
+            <div className="stat-value text-3xl md:text-4xl font-bold text-brand-600">2,899.7%</div>
+            <div className="stat-label text-sm md:text-base text-neutral-600">Leo BTC Returns<br/>(2020-Present)</div>
+          </div>
+          <div className="leo-stat text-center p-4">
+            <div className="stat-value text-3xl md:text-4xl font-bold text-brand-600">9,683.4%</div>
+            <div className="stat-label text-sm md:text-base text-neutral-600">Leo ETH Returns<br/>(2020-Present)</div>
+          </div>
+          <div className="leo-stat text-center p-4">
+            <div className="stat-value text-3xl md:text-4xl font-bold text-brand-600">55,962.1%</div>
+            <div className="stat-label text-sm md:text-base text-neutral-600">Leo SOL Returns<br/>(2021-Present)</div>
+          </div>
+        </div>
+
+        {/* CTA callout */}
+        <div className="cta-callout text-center mb-10 max-w-3xl mx-auto p-6 bg-brand-50 rounded-xl border border-brand-100">
+          <h3 className="text-xl md:text-2xl font-headline font-semibold mb-4 text-brand-700">See The Difference Yourself</h3>
+          <p className="text-lg leading-relaxed font-content text-neutral-700">
+            Experience how our intelligent algorithms capture major upswings while protecting against devastating downturns. 
+            Interact with the chart below to discover a smarter way to invest in crypto. <span className="italic">*Signals available to all memberships</span>
+          </p>
+        </div>
+
         {/* ─── full-width chart card ────────────────── */}
-        <div className="relative group mx-auto w-full">
+        <div className="relative group mx-auto w-full chart-container">
           <div className="absolute -inset-2 rounded-2xl blur-md opacity-75
                           bg-gradient-to-r from-brand-600/30 to-brand-400/30
                           group-hover:opacity-100 transition duration-300" />
