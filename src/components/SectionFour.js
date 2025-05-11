@@ -118,8 +118,7 @@ const SectionFour = () => {
         <div className="cta-callout text-center mb-10 max-w-3xl mx-auto p-6 bg-brand-50 rounded-xl border border-brand-100">
           <h3 className="text-xl md:text-2xl font-headline font-semibold mb-4 text-brand-700">See The Difference Yourself</h3>
           <p className="text-lg leading-relaxed font-content text-neutral-700">
-            Experience how our intelligent algorithms capture major upswings while protecting against devastating downturns. 
-            Interact with the chart below to discover a smarter way to invest in crypto. <span className="italic">*Signals available to all memberships</span>
+            To see how your investment would have performed, select your preferred crypto from the dropdown menu. Enter your initial investment amount in dollars, then click "Play" to start the simulation. Watch as our algorithmic trading strategy (shown in blue) compares against a traditional buy-and-hold approach (shown in red). This interactive visualization lets you explore the potential difference in returns between doing what we do and what the rest of the market doing. *Signals available to all memberships
           </p>
         </div>
 
