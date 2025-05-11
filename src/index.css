@@ -37,3 +37,115 @@
 .animate-fade-out-down {
   animation: fade-out-down 0.3s ease-in forwards;
 }
+
+/* 3D Carousel Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.carousel-card {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              opacity 0.6s ease-out;
+}
+
+/* Shimmering effect for percentage values */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg, 
+    #4db2d3 0%, 
+    #4db2d3 45%, 
+    #6ac4e0 50%, 
+    #4db2d3 55%, 
+    #4db2d3 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 5s linear infinite, pulse-scale 3s ease-in-out infinite;
+  text-shadow: 0 2px 10px rgba(77, 178, 211, 0.2);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  position: relative;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  pointer-events: none;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    max-width: 90%;
+  }
+  
+  .shimmer-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Fallback for browsers that don't support animations */
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-text {
+    background: #4db2d3;
+    animation: none;
+    color: white;
+    text-shadow: none;
+  }
+  
+  .shimmer-effect {
+    display: none;
+  }
+  
+  .carousel-card {
+    transition: none;
+  }
+}

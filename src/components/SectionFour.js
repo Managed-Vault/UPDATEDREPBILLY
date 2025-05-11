@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CryptoChart from './CryptoChart';
 
 const SectionFour = () => { 
+  // State for carousel animation
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  
+  // Performance data
+  const performanceData = [
+    { asset: 'BTC', returns: '2,899.7%', period: '2020-Present' },
+    { asset: 'ETH', returns: '9,683.4%', period: '2020-Present' },
+    { asset: 'SOL', returns: '55,962.1%', period: '2021-Present' }
+  ];
+  
+  // Auto-rotate carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveIndex((current) => (current + 1) % performanceData.length);
+        setIsAnimating(false);
+      }, 500);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [performanceData.length]);
+
   return (
     /* SECTION 4: STRATEGY SECTION - SIGNALS FIRST */
     <section className="bg-gradient-to-b from-neutral-50 to-white py-24 px-4 text-neutral-800 relative overflow-hidden" id="clear-easy-signals">
@@ -33,19 +57,60 @@ const SectionFour = () => {
           </p>
         </div>
 
-        {/* Performance stats bar */}
-        <div className="leo-stats-bar flex flex-wrap justify-around mb-10 max-w-5xl mx-auto">
-          <div className="leo-stat text-center p-4">
-            <div className="stat-value text-3xl md:text-4xl font-bold text-brand-600">2,899.7%</div>
-            <div className="stat-label text-sm md:text-base text-neutral-600">Leo BTC Returns<br/>(2020-Present)</div>
-          </div>
-          <div className="leo-stat text-center p-4">
-            <div className="stat-value text-3xl md:text-4xl font-bold text-brand-600">9,683.4%</div>
-            <div className="stat-label text-sm md:text-base text-neutral-600">Leo ETH Returns<br/>(2020-Present)</div>
-          </div>
-          <div className="leo-stat text-center p-4">
-            <div className="stat-value text-3xl md:text-4xl font-bold text-brand-600">55,962.1%</div>
-            <div className="stat-label text-sm md:text-base text-neutral-600">Leo SOL Returns<br/>(2021-Present)</div>
+        {/* Animated Percentage Display with Shimmering Effect */}
+        <div className="leo-stats-carousel relative mb-16 max-w-5xl mx-auto">
+          <div className="carousel-container h-64 md:h-72 relative">
+            {/* 3D Rotating Carousel */}
+            <div className="carousel-track absolute inset-0 flex items-center justify-center">
+              {performanceData.map((item, index) => (
+                <div 
+                  key={index}
+                  className={`carousel-card absolute w-full max-w-md mx-auto bg-gradient-to-br from-brand-50 to-white p-8 rounded-xl shadow-xl border border-brand-100 transition-all duration-700 transform ${
+                    index === activeIndex 
+                      ? 'opacity-100 scale-100 z-20 translate-y-0' 
+                      : index === (activeIndex + 1) % performanceData.length
+                        ? 'opacity-40 scale-90 z-10 translate-y-8 translate-x-16'
+                        : 'opacity-40 scale-90 z-10 translate-y-8 -translate-x-16'
+                  } ${isAnimating ? 'transition-opacity' : ''}`}
+                  aria-hidden={index !== activeIndex}
+                >
+                  <div className="text-center">
+                    <div className="relative overflow-hidden">
+                      <div className="stat-value text-5xl md:text-7xl font-bold mb-3 shimmer-text">
+                        {item.returns}
+                      </div>
+                      <div className="shimmer-effect"></div>
+                    </div>
+                    <div className="stat-label text-xl md:text-2xl font-medium text-brand-700 animate-fade-in">
+                      Leo {item.asset} Returns
+                    </div>
+                    <div className="stat-period text-base text-neutral-600 mt-2 animate-fade-in">
+                      ({item.period})
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Navigation Dots */}
+            <div className="carousel-nav absolute -bottom-8 left-0 right-0 flex justify-center gap-2">
+              {performanceData.map((_, index) => (
+                <button 
+                  key={index}
+                  onClick={() => {
+                    setIsAnimating(true);
+                    setTimeout(() => {
+                      setActiveIndex(index);
+                      setIsAnimating(false);
+                    }, 300);
+                  }}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === activeIndex ? 'bg-brand-600 w-6' : 'bg-brand-300'
+                  }`}
+                  aria-label={`View ${performanceData[index].asset} returns`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
