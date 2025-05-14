@@ -123,67 +123,82 @@ const SectionSix = () => {
           </div>
         </div>
 
-        {/* Community Events */}
+        {/* Panama Meetups */}
         <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-headline font-bold text-neutral-800 mb-8 text-center">Global Community Meetups</h3>
+          <h3 className="text-2xl md:text-3xl font-headline font-bold text-neutral-800 mb-8 text-center">Panama Meetups</h3>
           <div className="relative">
             <div className="absolute -inset-2 bg-gradient-to-r from-brand-600/20 to-brand-400/20 rounded-xl blur-md"></div>
             <div className="relative bg-white p-6 rounded-xl shadow-xl">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Panama Market Mastery */}
-                <div className="rounded-lg overflow-hidden shadow-md">
-                  <div className="relative h-60 bg-neutral-100">
-                    {/* Placeholder for community photo */}
-                    <div className="absolute inset-0 bg-neutral-200 flex items-center justify-center text-neutral-400">
-                      <p className="text-center font-content">Panama Market Mastery<br />(Photo pending)</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Panama Mastermind 2023 */}
+                <div className="flex flex-col items-center">
+                  <h4 className="font-headline font-bold text-brand-700 text-2xl mb-4">Panama Mastermind 2023</h4>
+                  <div className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden shadow-lg border-8 border-neutral-800 bg-black">
+                    {/* Phone frame with video placeholder */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-neutral-900">
+                      <div className="text-center text-white">
+                        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <p className="text-sm">Panama 2023 Highlights</p>
+                        <p className="text-xs text-white/60 mt-2">Tap to play video</p>
+                      </div>
                     </div>
-                    <img 
-                      src={process.env.PUBLIC_URL + "/images/placeholder-panama.jpg"} 
-                      alt="Panama Market Mastery" 
-                      className="w-full h-full object-cover opacity-0"
-                    />
-                  </div>
-                  <div className="p-4 bg-brand-50">
-                    <h4 className="font-headline font-bold text-brand-700">Panama Market Mastery</h4>
-                    <p className="text-sm font-content text-neutral-600">3-day intensive with 50+ members</p>
+                    {/* Status bar */}
+                    <div className="absolute top-0 left-0 right-0 h-6 bg-black flex items-center justify-between px-4">
+                      <span className="text-white text-xs">9:41</span>
+                      <div className="flex items-center space-x-1">
+                        <span className="text-white text-xs">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                          </svg>
+                        </span>
+                        <span className="text-white text-xs">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M17.778 8.222c-4.296-4.296-11.26-4.296-15.556 0A1 1 0 01.808 6.808c5.076-5.077 13.308-5.077 18.384 0a1 1 0 01-1.414 1.414zM14.95 11.05a7 7 0 00-9.9 0 1 1 0 01-1.414-1.414 9 9 0 0112.728 0 1 1 0 01-1.414 1.414zM12.12 13.88a3 3 0 00-4.242 0 1 1 0 01-1.415-1.415 5 5 0 017.072 0 1 1 0 01-1.415 1.415zM9 16a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                          </svg>
+                        </span>
+                        <span className="text-white text-xs">100%</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Newport */}
-                <div className="rounded-lg overflow-hidden shadow-md">
-                  <div className="relative h-60 bg-neutral-100">
-                    {/* Placeholder for community photo */}
-                    <div className="absolute inset-0 bg-neutral-200 flex items-center justify-center text-neutral-400">
-                      <p className="text-center font-content">Newport Meetup<br />(Photo pending)</p>
+                {/* Panama Mastermind 2024 */}
+                <div className="flex flex-col items-center">
+                  <h4 className="font-headline font-bold text-brand-700 text-2xl mb-4">Panama Mastermind 2024</h4>
+                  <div className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden shadow-lg border-8 border-neutral-800 bg-black">
+                    {/* Phone frame with video placeholder */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-neutral-900">
+                      <div className="text-center text-white">
+                        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <p className="text-sm">Panama 2024 Highlights</p>
+                        <p className="text-xs text-white/60 mt-2">Tap to play video</p>
+                      </div>
                     </div>
-                    <img 
-                      src={process.env.PUBLIC_URL + "/images/placeholder-newport.jpg"} 
-                      alt="Newport Meetup" 
-                      className="w-full h-full object-cover opacity-0"
-                    />
-                  </div>
-                  <div className="p-4 bg-brand-50">
-                    <h4 className="font-headline font-bold text-brand-700">Newport Mastermind</h4>
-                    <p className="text-sm font-content text-neutral-600">Quarterly strategic planning event</p>
-                  </div>
-                </div>
-
-                {/* Costa Rica */}
-                <div className="rounded-lg overflow-hidden shadow-md">
-                  <div className="relative h-60 bg-neutral-100">
-                    {/* Placeholder for community photo */}
-                    <div className="absolute inset-0 bg-neutral-200 flex items-center justify-center text-neutral-400">
-                      <p className="text-center font-content">Costa Rica Retreat<br />(Photo pending)</p>
+                    {/* Status bar */}
+                    <div className="absolute top-0 left-0 right-0 h-6 bg-black flex items-center justify-between px-4">
+                      <span className="text-white text-xs">9:41</span>
+                      <div className="flex items-center space-x-1">
+                        <span className="text-white text-xs">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                          </svg>
+                        </span>
+                        <span className="text-white text-xs">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M17.778 8.222c-4.296-4.296-11.26-4.296-15.556 0A1 1 0 01.808 6.808c5.076-5.077 13.308-5.077 18.384 0a1 1 0 01-1.414 1.414zM14.95 11.05a7 7 0 00-9.9 0 1 1 0 01-1.414-1.414 9 9 0 0112.728 0 1 1 0 01-1.414 1.414zM12.12 13.88a3 3 0 00-4.242 0 1 1 0 01-1.415-1.415 5 5 0 017.072 0 1 1 0 01-1.415 1.415zM9 16a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                          </svg>
+                        </span>
+                        <span className="text-white text-xs">100%</span>
+                      </div>
                     </div>
-                    <img 
-                      src={process.env.PUBLIC_URL + "/images/placeholder-costarica.jpg"} 
-                      alt="Costa Rica Retreat" 
-                      className="w-full h-full object-cover opacity-0"
-                    />
-                  </div>
-                  <div className="p-4 bg-brand-50">
-                    <h4 className="font-headline font-bold text-brand-700">Costa Rica Adventure</h4>
-                    <p className="text-sm font-content text-neutral-600">Annual members-only retreat</p>
                   </div>
                 </div>
               </div>
