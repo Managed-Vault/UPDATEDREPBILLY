@@ -87,7 +87,7 @@ const SectionFour = () => {
                     <div className="stat-period text-base text-neutral-600 mt-2 animate-fade-in">
                       ({item.period})
                     </div>
-                    <div className="stat-conversion text-lg md:text-xl font-medium text-green-600 mt-3 animate-fade-in">
+                    <div className="stat-conversion text-2xl md:text-3xl font-bold text-green-600 mt-4 animate-fade-in">
                       {item.conversion}
                     </div>
                   </div>
