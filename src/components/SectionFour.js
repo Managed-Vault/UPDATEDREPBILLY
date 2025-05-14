@@ -9,9 +9,9 @@ const SectionFour = () => {
   
   // Performance data
   const performanceData = [
-    { asset: 'BTC', returns: '2,899.7%', period: '2020-Present' },
-    { asset: 'ETH', returns: '9,683.4%', period: '2020-Present' },
-    { asset: 'SOL', returns: '55,962.1%', period: '2021-Present' }
+    { asset: 'BTC', returns: '2,899.7%', period: '2020-Present', conversion: '$1,000 → $29,997' },
+    { asset: 'ETH', returns: '9,683.4%', period: '2020-Present', conversion: '$1,000 → $97,834' },
+    { asset: 'SOL', returns: '55,962.1%', period: '2021-Present', conversion: '$1,000 → $560,621' }
   ];
   
   // Auto-rotate carousel
@@ -87,6 +87,9 @@ const SectionFour = () => {
                     <div className="stat-period text-base text-neutral-600 mt-2 animate-fade-in">
                       ({item.period})
                     </div>
+                    <div className="stat-conversion text-lg md:text-xl font-medium text-green-600 mt-3 animate-fade-in">
+                      {item.conversion}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -116,21 +119,10 @@ const SectionFour = () => {
 
         {/* CTA callout */}
         <div className="cta-callout text-center mb-10 max-w-3xl mx-auto p-6 bg-brand-50 rounded-xl border border-brand-100">
-          <h3 className="text-2xl md:text-4xl font-headline font-bold mb-6 text-brand-700 drop-shadow-sm">
-            See The Difference Yourself
-          </h3>
+          <h3 className="text-xl md:text-2xl font-headline font-semibold mb-4 text-brand-700">See The Difference Yourself</h3>
           <p className="text-lg leading-relaxed font-content text-neutral-700">
-            1. Choose your crypto from the dropdown below
-            <br />
-            2. Enter your investment amount in dollars
-            <br />
-            3. Hit "Play" to run the simulation
-            <br />
-            4. Watch the chart compare our Leo algorithms (blue) vs buy-and-hold (red)
-            <br /><br />
-            Our strategies capture the upside while dodging 80% of the downside—see it in action below!
-            <br />
-            *Signals available to all memberships
+            Experience how our intelligent algorithms capture major upswings while protecting against devastating downturns. 
+            Interact with the chart below to discover a smarter way to invest in crypto. <span className="italic">*Signals available to all memberships</span>
           </p>
         </div>
 
